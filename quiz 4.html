@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Function Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        .highlight {
+            background-color: lightgreen;
+        }
+        .correct-answer {
+            color: green;
+        }
+        .user-answer {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Muscle Function Quiz</h1>
+
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is the name of the point where a motor neuron connects with a muscle fiber?</p>
+        <input type="radio" name="q1" value="a"> a) Sarcomere<br>
+        <input type="radio" name="q1" value="b"> b) Myelin sheath<br>
+        <input type="radio" name="q1" value="c"> c) Neuromuscular junction<br>
+        <input type="radio" name="q1" value="d"> d) Synaptic vesicle<br>
+    </div>
+    <div class="question">
+        <p>2. Which ion is crucial for initiating muscle contraction?</p>
+        <input type="radio" name="q2" value="a"> a) Sodium<br>
+        <input type="radio" name="q2" value="b"> b) Potassium<br>
+        <input type="radio" name="q2" value="c"> c) Calcium<br>
+        <input type="radio" name="q2" value="d"> d) Chloride<br>
+    </div>
+    <div class="question">
+        <p>3. What is the role of acetylcholine in muscle function?</p>
+        <input type="radio" name="q3" value="a"> a) Breaks down ATP<br>
+        <input type="radio" name="q3" value="b"> b) Transmits nerve impulses across the synapse<br>
+        <input type="radio" name="q3" value="c"> c) Removes lactic acid<br>
+        <input type="radio" name="q3" value="d"> d) Repairs muscle fibers<br>
+    </div>
+    <div class="question">
+        <p>4. What is the primary cause of muscle fatigue?</p>
+        <input type="radio" name="q4" value="a"> a) Accumulation of lactic acid<br>
+        <input type="radio" name="q4" value="b"> b) Depletion of calcium ions<br>
+        <input type="radio" name="q4" value="c"> c) Excess ATP<br>
+        <input type="radio" name="q4" value="d"> d) Rapid nerve impulses<br>
+    </div>
+    <div class="question">
+        <p>5. How does the body recover from muscle fatigue?</p>
+        <input type="radio" name="q5" value="a"> a) By converting lactic acid to glucose<br>
+        <input type="radio" name="q5" value="b"> b) By oxidizing lactic acid in the liver<br>
+        <input type="radio" name="q5" value="c"> c) By increasing anaerobic respiration<br>
+        <input type="radio" name="q5" value="d"> d) By releasing more calcium ions<br>
+    </div>
+    <div class="question">
+        <p>6. What is a muscle spasm?</p>
+        <input type="radio" name="q6" value="a"> a) A voluntary muscle contraction<br>
+        <input type="radio" name="q6" value="b"> b) An involuntary and sustained muscle contraction<br>
+        <input type="radio" name="q6" value="c"> c) A complete muscle tear<br>
+        <input type="radio" name="q6" value="d"> d) A type of muscle fatigue<br>
+    </div>
+    <div class="question">
+        <p>7. Which of the following can cause muscle spasms?</p>
+        <input type="radio" name="q7" value="a"> a) Deficiency of ATP<br>
+        <input type="radio" name="q7" value="b"> b) Excess oxygen<br>
+        <input type="radio" name="q7" value="c"> c) High levels of cholinesterase<br>
+        <input type="radio" name="q7" value="d"> d) Increased blood flow to the muscle<br>
+    </div>
+    <div class="question">
+        <p>8. What is the function of cholinesterase?</p>
+        <input type="radio" name="q8" value="a"> a) Breaks down acetylcholine<br>
+        <input type="radio" name="q8" value="b"> b) Produces acetylcholine<br>
+        <input type="radio" name="q8" value="c"> c) Stimulates muscle contraction<br>
+        <input type="radio" name="q8" value="d"> d) Inhibits muscle relaxation<br>
+    </div>
+    <div class="question">
+        <p>9. What happens during muscle depolarization?</p>
+        <input type="radio" name="q9" value="a"> a) The inside of the muscle fiber becomes more negative<br>
+        <input type="radio" name="q9" value="b"> b) The inside of the muscle fiber becomes more positive<br>
+        <input type="radio" name="q9" value="c"> c) Calcium ions are pumped out of the cell<br>
+        <input type="radio" name="q9" value="d"> d) Acetylcholine is broken down<br>
+    </div>
+    <div class="question">
+        <p>10. What is the role of ATP in muscle contraction?</p>
+        <input type="radio" name="q10" value="a"> a) Provides energy for the myosin head to detach from actin<br>
+        <input type="radio" name="q10" value="b"> b) Triggers the release of calcium ions<br>
+        <input type="radio" name="q10" value="c"> c) Synthesizes acetylcholine<br>
+        <input type="radio" name="q10" value="d"> d) Maintains the resting membrane potential<br>
+    </div>
+    <div class="question">
+        <p>11. Which of the following describes the state of muscle polarization?</p>
+        <input type="radio" name="q11" value="a"> a) The inside of the muscle fiber is more negative than the outside<br>
+        <input type="radio" name="q11" value="b"> b) The inside of the muscle fiber is more positive than the outside<br>
+        <input type="radio" name="q11" value="c"> c) There is no electrical charge difference across the membrane<br>
+        <input type="radio" name="q11" value="d"> d) The muscle fiber is contracting<br>
+    </div>
+    <div class="question">
+        <p>12. What is the function of the sarcoplasmic reticulum in muscle cells?</p>
+        <input type="radio" name="q12" value="a"> a) Produces ATP<br>
+        <input type="radio" name="q12" value="b"> b) Stores and releases calcium ions<br>
+        <input type="radio" name="q12" value="c"> c) Breaks down acetylcholine<br>
+        <input type="radio" name="q12" value="d"> d) Generates nerve impulses<br>
+    </div>
+    <div class="question">
+        <p>13. Which of the following is a characteristic of anaerobic respiration in muscles?</p>
+        <input type="radio" name="q13" value="a"> a) It produces lactic acid<br>
+        <input type="radio" name="q13" value="b"> b) It requires oxygen<br>
+        <input type="radio" name="q13" value="c"> c) It generates a large amount of ATP<br>
+        <input type="radio" name="q13" value="d"> d) It occurs primarily during rest<br>
+    </div>
+    <div class="question">
+        <p>14. What is the role of glycogen in muscle function?</p>
+        <input type="radio" name="q14" value="a"> a) It is a storage form of glucose<br>
+        <input type="radio" name="q14" value="b"> b) It is a structural protein<br>
+        <input type="radio" name="q14" value="c"> c) It is a neurotransmitter<br>
+        <input type="radio" name="q14" value="d"> d) It is an enzyme<br>
+    </div>
+    <div class="question">
+        <p>15. What is the main difference between a grade 2 and grade 3 muscle tear?</p>
+        <input type="radio" name="q15" value="a"> a) A grade 2 tear involves complete rupture of the muscle<br>
+        <input type="radio" name="q15" value="b"> b) A grade 3 tear involves complete rupture of the muscle<br>
+        <input type="radio" name="q15" value="c"> c) A grade 2 tear is more severe than a grade 3 tear<br>
+        <input type="radio" name="q15" value="d"> d) A grade 3 tear does not cause bleeding<br>
+    </div>
+    <div class="question">
+        <p>16. Which of the following is NOT a function of the nervous system in muscle contraction?</p>
+        <input type="radio" name="q16" value="a"> a) Initiating the nerve impulse<br>
+        <input type="radio" name="q16" value="b"> b) Releasing calcium ions<br>
+        <input type="radio" name="q16" value="c"> c) Producing ATP<br>
+        <input type="radio" name="q16" value="d"> d) Breaking down acetylcholine<br>
+    </div>
+    <div class="question">
+        <p>17. What is the term for the repeated, rapid contraction of a muscle?</p>
+        <input type="radio" name="q17" value="a"> a) Muscle fatigue<br>
+        <input type="radio" name="q17" value="b"> b) Muscle spasm<br>
+        <input type="radio" name="q17" value="c"> c) Tetanus<br>
+        <input type="radio" name="q17" value="d"> d) Repolarization<br>
+    </div>
+    <div class="question">
+        <p>18. Which of the following is a potential consequence of severe muscle spasm?</p>
+        <input type="radio" name="q18" value="a"> a) Increased blood flow to the muscle<br>
+        <input type="radio" name="q18" value="b"> b) Muscle tear and bleeding<br>
+        <input type="radio" name="q18" value="c"> c) Rapid removal of lactic acid<br>
+        <input type="radio" name="q18" value="d"> d) Enhanced muscle performance<br>
+    </div>
+    <div class="question">
+        <p>19. What is the role of parathyroid hormone in muscle function?</p>
+        <input type="radio" name="q19" value="a"> a) Regulates calcium levels in the blood<br>
+        <input type="radio" name="q19" value="b"> b) Stimulates acetylcholine release<br>
+        <input type="radio" name="q19" value="c"> c) Enhances ATP production<br>
+        <input type="radio" name="q19" value="d"> d) Promotes muscle relaxation<br>
+    </div>
+    <div class="question">
+        <p>20. Which of the following is NOT a factor that can influence the speed of muscle contraction?</p>
+        <input type="radio" name="q20" value="a"> a) Muscle fiber type<br>
+        <input type="radio" name="q20" value="b"> b) Temperature<br>
+        <input type="radio" name="q20" value="c"> c) Blood glucose levels<br>
+        <input type="radio" name="q20" value="d"> d) Availability of ATP<br>
+    </div>
+    
+    <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+</form>
+
+<div id="result" class="result"></div>
+
+<script>
+    const correctAnswers = {
+        q1: 'c',
+        q2: 'c',
+        q3: 'b',
+        q4: 'a',
+        q5: 'b',
+        q6: 'b',
+        q7: 'c',
+        q8: 'a',
+        q9: 'b',
+        q10: 'a',
+        q11: 'a',
+        q12: 'b',
+        q13: 'a',
+        q14: 'a',
+        q15: 'b',
+        q16: 'c',
+        q17: 'c',
+        q18: 'b',
+        q19: 'a',
+        q20: 'c'
+    };
+
+    function submitQuiz() {
+        let score = 0;
+        let resultText = '';
+        let wrongAnswers = [];
+
+        for (let question in correctAnswers) {
+            const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+            if (userAnswer) {
+                if (userAnswer.value === correctAnswers[question]) {
+                    score++;
+                    userAnswer.parentElement.style.backgroundColor = "lightgreen"; // Highlight correct answers
+                } else {
+                    wrongAnswers.push(`Question ${question.slice(1)}: Correct answer is ${correctAnswers[question]}`);
+                    userAnswer.parentElement.style.backgroundColor = "red"; // Highlight wrong answers
+                    // Highlight correct answer
+                    const correctInput = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`);
+                    if (correctInput) {
+                        correctInput.parentElement.style.backgroundColor = "lightgreen"; // Highlight correct answers
+                    }
+                }
+            } else {
+                wrongAnswers.push(`Question ${question.slice(1)}: No answer selected`);
+            }
+        }
+
+        resultText += `Your score: ${score} out of 20<br>`;
+        if (wrongAnswers.length > 0) {
+            resultText += `<span class="wrong">You answered the following questions incorrectly:</span><br>`;
+            wrongAnswers.forEach(answer => {
+                resultText += `<span class="wrong">${answer}</span><br>`;
+            });
+        } else {
+            resultText += `<span class="correct">Congratulations! You answered all questions correctly!</span>`;
+        }
+
+        document.getElementById('result').innerHTML = resultText;
+    }
+</script>
+
+</body>
+</html>
